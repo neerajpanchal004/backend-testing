@@ -19,7 +19,7 @@ const Dashboard = () => {
     fetchData();
    },[])
   return (
-    <div>data{first}</div>
+    <div>{first}</div>
   )
 }
 
