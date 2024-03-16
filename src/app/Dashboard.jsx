@@ -10,7 +10,7 @@ const Dashboard = () => {
       console.log(res);
       setFirst(res.data.message);
     } catch (error) {
-      console.log("error");
+      console.log("error", error);
     }
   }
   useEffect(() => {
