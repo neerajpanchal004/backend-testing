@@ -1,26 +1,22 @@
-"use client"
-import axios from 'axios'
-import React ,{useEffect, useState}from 'react'
+"use client";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 
 const Dashboard = () => {
-    const [first, setFirst] = useState()
-   async function fetchData(){
+  const [first, setFirst] = useState();
+  async function fetchData() {
     try {
-        let res = await axios.get("/api/users?category=dashbord") 
-        console.log(res)
-        setFirst(res.data.message)
-        
-        
+      let res = await axios.get("/api/users?category=dashbord");
+      console.log(res);
+      setFirst(res.data.message);
     } catch (error) {
-        
+      console.log("error");
     }
-   }
-   useEffect(()=>{
+  }
+  useEffect(() => {
     fetchData();
-   },[])
-  return (
-    <div>{first}</div>
-  )
-}
+  }, []);
+  return <div>{first}</div>;
+};
 
-export default Dashboard
+export default Dashboard;
