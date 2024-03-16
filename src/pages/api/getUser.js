@@ -9,5 +9,4 @@ export default function handler(req, res) {
   } else {
     res.status(400).json({ text: "Invalid Category id" });
   }
-  res.status(500).json({ text: "Something went wrong" });
 }
