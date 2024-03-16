@@ -4,7 +4,7 @@ export default function handler(req, res) {
     user: "Hello User",
     dashbord: "Hello Dashboard",
   };
-  if (!r_obj[category]) {
+  if (r_obj[category] != undefined) {
     res.status(200).json({ text: r_obj[category] });
   } else {
     res.status(400).json({ text: "Invalid Category id" });
