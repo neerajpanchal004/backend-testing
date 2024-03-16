@@ -1,4 +1,4 @@
-export default async function handler(req, res) {
+export default function handler(req, res) {
   if (req.query.category == "dashbord") {
     res.status(200).json({ message: "Dashboard Category Selected!" });
   } else if (req.query.category == "user") {
