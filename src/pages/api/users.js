@@ -1,12 +1,10 @@
 export default function handler(req, res) {
-  if (req.query.category == "dashbord") {
+  const { category } = req.query;
+  if (category == "dashbord") {
     res.status(200).json({ message: "Dashboard Category Selected!" });
-  } else if (req.query.category == "user") {
-    res.status(200).json({ message: "User Category Selected!" });
-  } else {
-    res
-      .status(400)
-      .json("Invalid Category! Please Select 'dashbord' or 'user'.");
   }
-  res.status(403).json({ error: "Something went wrong!" });
+  if (category == "user") {
+    res.status(200).json({ message: "User Category Selected!" });
+  }
+  res.status(400).json("Invalid Category! Please Select 'dashbord' or 'user'.");
 }
