@@ -8,5 +8,5 @@ export default function handler(req, res) {
       .status(400)
       .json("Invalid Category! Please Select 'dashbord' or 'user'.");
   }
-  res.status(403).send({ error: "Something went wrong!" });
+  res.status(403).json({ error: "Something went wrong!" });
 }
